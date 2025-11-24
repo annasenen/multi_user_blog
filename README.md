@@ -75,6 +75,7 @@ python app.py
 ---
 
 ## Project Structure
+```
 multi_user_blog/
 │
 ├── app.py # Application entry point
@@ -88,6 +89,7 @@ multi_user_blog/
 │ ├── templates/ # Jinja2 templates
 │ └── static/ # Images, CSS, uploads
 └── README.md
+```
 
 ---
 
