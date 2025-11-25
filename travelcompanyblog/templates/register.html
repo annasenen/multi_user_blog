@@ -1,14 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form method="POST">
-        {{ form.hidden_tag() }}
-        {{ form.email.label }} {{ form.email}}<br>
-        {{ form.username.label }} {{ form.username}}<br>
-        {{ form.password.label }} {{ form.password}}<br>
-        {{ form.pass_confirm.label }} {{ form.pass_confirm}}<br>
-        {{ form.submit() }}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 460px; border-radius: 16px; background-color: #FBF2ED;">
+        <h3 class="text-center mb-4" style="color: #3A3A3A;">Create Your Account</h3>
 
+        <form method="POST">
+            {{ form.hidden_tag() }}
 
-    </form>
+            <!-- Email -->
+            <div class="mb-3">
+                {{ form.email.label(class="form-label fw-semibold") }}
+                {{ form.email(class="form-control", placeholder="Enter your email") }}
+            </div>
+
+            <!-- Username -->
+            <div class="mb-3">
+                {{ form.username.label(class="form-label fw-semibold") }}
+                {{ form.username(class="form-control", placeholder="Choose a username") }}
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                {{ form.password.label(class="form-label fw-semibold") }}
+                {{ form.password(class="form-control", placeholder="Create password") }}
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="mb-3">
+                {{ form.pass_confirm.label(class="form-label fw-semibold") }}
+                {{ form.pass_confirm(class="form-control", placeholder="Confirm password") }}
+            </div>
+
+            <!-- Submit -->
+            <div class="d-grid">
+                {{ form.submit(class="btn btn-dark rounded-pill") }}
+            </div>
+        </form>
+
+        <p class="text-center mt-3 mb-0">
+            <a href="{{ url_for('users.login') }}" style="color:#97BCBF; text-decoration:none;">
+                Already have an account? Log in
+            </a>
+        </p>
+    </div>
+</div>
 {% endblock %}

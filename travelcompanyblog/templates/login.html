@@ -1,12 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form method="POST">
-        {{ form.hidden_tag() }}
-        {{ form.email.label }} {{ form.email}}<br>
-        {{ form.password.label }} {{ form.password}}<br>
-        {{ form.submit() }}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 420px; border-radius: 16px; background-color: #FBF2ED;">
+        <h3 class="text-center mb-4" style="color: #3A3A3A;">Login to Your Account</h3>
 
+        <form method="POST">
+            {{ form.hidden_tag() }}
 
-    </form>
+            <!-- Email -->
+            <div class="mb-3">
+                {{ form.email.label(class="form-label fw-semibold") }}
+                {{ form.email(class="form-control", placeholder="Enter your email") }}
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                {{ form.password.label(class="form-label fw-semibold") }}
+                {{ form.password(class="form-control", placeholder="Enter your password") }}
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+                {{ form.submit(class="btn btn-dark rounded-pill") }}
+            </div>
+        </form>
+
+        <p class="text-center mt-3 mb-0">
+            <a href="{{ url_for('users.register') }}" style="color:#97BCBF; text-decoration:none;">
+                Don’t have an account? Register
+            </a>
+        </p>
+    </div>
+</div>
 {% endblock %}
