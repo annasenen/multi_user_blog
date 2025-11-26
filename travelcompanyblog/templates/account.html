@@ -1,38 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <div align="center">
-            <h1>Account Page</h1>
-            <p>Welcome, {{ current_user.username }}!</p>
-            <p>Email: {{ current_user.email }}</p>
-            <img align='center' src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}" alt="Profile Picture" class="img-fluid rounded-circle" width="200">
+
+   <div class="container mt-5" style="max-width: 900px;">
+    
+    <!-- Profile Header Card -->
+    <div class="card shadow-sm p-4 mb-4" style="border-radius: 15px;">
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='profile_pics/' + current_user.profile_image) }}"
+                 class="rounded-circle mb-3"
+                 width="150" height="150" style="object-fit: cover;">
+
+            <h2 class="fw-bold">{{ current_user.username }}</h2>
+            <p class="text-muted">{{ current_user.email }}</p>
         </div>
     </div>
 
-    <div class="container">
-        <h2>Update Profile Picture</h2>
-        <form method="POST" enctype="multipart/form-data">
+    <!-- Update Form Card -->
+    <div class="card shadow-sm p-4" style="border-radius: 15px;">
+        <h4 class="mb-3 fw-semibold text-center">Update Your Profile</h4>
+
+        <form method="POST" enctype="multipart/form-data" class="px-2">
             {{ form.hidden_tag() }}
 
-            <div class="form-group"> 
-                {{ form.username.label(class='form-group') }} 
-                {{ form.username(class='form-control') }}<br><br>
+           <div class="mb-3">
+                {{ form.username.label(class='form-label fw-semibold') }}
+                {{ form.username(class='form-control form-control-lg') }}
             </div>
 
-            <div class="form-group">
-                {{ form.email.label(class='form-group') }} 
-                {{ form.email(class='form-control') }}<br><br>
+           <div class="mb-3">
+                {{ form.email.label(class='form-label fw-semibold') }}
+                {{ form.email(class='form-control form-control-lg') }}
             </div>
 
-            <div class="form-group">
-                {{ form.picture.label(class='form-group') }} 
-                {{ form.picture(class='form-control') }}<br><br>
+             <div class="mb-3">
+                {{ form.picture.label(class='form-label fw-semibold') }}
+                {{ form.picture(class='form-control form-control-lg') }}
             </div>
 
-            <div class="form-group">
-                {{ form.submit(class='btn btn-primary') }}
+             <div class="d-grid">
+                {{ form.submit(class='btn btn-dark btn-lg') }}
             </div>
             
         </form>
+    </div>
+    </div>
 
 {% endblock %}
