@@ -3,14 +3,15 @@
 A full CRUD multi-user blog application built with **Python**, **Flask**, **SQLite**, **WTForms**, and **SQLAlchemy**.  
 Users can register, log in, update profiles, create blog posts, edit posts, and delete posts.
 
-This project was developed as part of a university module to demonstrate full-stack development skills, backend server logic, UI templating, and database integration.
+This project was developed as part of a university module to demonstrate backend development, UI templating, secure authentication, and database integration.
 
 ---
 
 ## 🚀 Features
 
 ### 👤 User Features
-- User registration + secure login (password hashing)
+- User registration with secure password hashing
+- User login/logout
 - User profile update (email, username, profile picture)
 - User dashboard with list of posts
 - View posts of other users
@@ -18,7 +19,7 @@ This project was developed as part of a university module to demonstrate full-st
 ### ✍️ Blog Functionality
 - Create blog posts
 - Edit blog posts
-- Delete blog posts (with confirmation modal)
+- Delete posts with a confirmation modal
 - Pagination on the main page
 
 ### 🔐 Security
@@ -40,7 +41,7 @@ This project was developed as part of a university module to demonstrate full-st
 |-------|------------|
 | Backend | Python, Flask |
 | Database | SQLite + SQLAlchemy |
-| Frontend | Bootstrap 4, Jinja2 templates |
+| Frontend | Bootstrap 5, Jinja2 templates |
 | Security | Werkzeug hashing, Flask-Login |
 | Dev Tools | VS Code, Git, GitHub |
 
