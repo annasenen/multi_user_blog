@@ -36,13 +36,14 @@
                 {{ form.picture.label(class='form-label fw-semibold') }}
                 {{ form.picture(class='form-control form-control-lg') }}
 
-                {% if form.picture.errors %}
-                    <div class="text-danger mt-2">
-                        {% for error in form.picture.errors %}
-                            <small>{{ error }}</small>
-                        {% endfor %}
-                    </div>
-                {% endif %}
+                    {% if form.picture.errors %}
+                        <div id="picture-error" class="text-danger mt-1">
+                            {% for error in form.picture.errors %}
+                                <small>{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
             </div>
 
              <div class="d-grid">
