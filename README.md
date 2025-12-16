@@ -10,6 +10,7 @@ This project was developed as part of a university module to demonstrate backend
 ## 🚀 Features
 
 ### 👤 User Features
+
 - User registration with secure password hashing
 - User login/logout
 - User profile update (email, username, profile picture)
@@ -17,18 +18,21 @@ This project was developed as part of a university module to demonstrate backend
 - View posts of other users
 
 ### ✍️ Blog Functionality
+
 - Create blog posts
 - Edit blog posts
 - Delete posts with a confirmation modal
 - Pagination on the main page
 
 ### 🔐 Security
+
 - Password hashing (Werkzeug)
 - CSRF protection (WTForms)
 - Login required for protected routes
 - User-owned content enforced (`abort(403)`)
 
 ### 🗄️ Database
+
 - SQLite (development)
 - SQLAlchemy ORM models
 - Migration system with Flask-Migrate
@@ -37,38 +41,47 @@ This project was developed as part of a university module to demonstrate backend
 
 ## 🧱 Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Backend | Python, Flask |
-| Database | SQLite + SQLAlchemy |
-| Frontend | Bootstrap 5, Jinja2 templates |
-| Security | Werkzeug hashing, Flask-Login |
-| Dev Tools | VS Code, Git, GitHub |
+| Layer     | Technology                    |
+| --------- | ----------------------------- |
+| Backend   | Python, Flask                 |
+| Database  | SQLite + SQLAlchemy           |
+| Frontend  | Bootstrap 5, Jinja2 templates |
+| Security  | Werkzeug hashing, Flask-Login |
+| Dev Tools | VS Code, Git, GitHub          |
 
 ---
 
 ## 📦 Installation
 
 ### 1. Clone the repository
+
 ```sh
 git clone https://github.com/annasenem/multi_user_blog.git
 cd multi_user_blog
 ```
+
 ### 2. Create virtual environment
+
 ```sh
 python -m venv .venv
 source .venv/bin/activate    # Mac/Linux
 .venv\Scripts\activate       # Windows
 ```
+
 ### 3. Install dependencies
+
 ```sh
 pip install -r requirements.txt
 ```
+
 4. Run database migrations
+
 ```sh
 flask db upgrade
 ```
+
 5. Run the application
+
 ```sh
 python app.py
 ```
@@ -76,6 +89,7 @@ python app.py
 ---
 
 ## Project Structure
+
 ```
 multi_user_blog/
 │
@@ -97,18 +111,32 @@ multi_user_blog/
 ## Screenshots
 
 ### Home Page
+
 ![Home Page](screenshots/home.png)
 
-### Registration page  
+### Registration Page
 
-### Login page  
+![Registration Page](screenshots/register.png)
+
+### Login Page
+
+![Login Page](screenshots/login.png)
 
 ### Create Post
+
 ![Create Post](screenshots/create_post.png)
 
 ### Blog Post Detail Page
 
-### Delete confirmation modal
+![Blog Post Detail Page](screenshots/post_details.png)
+
+### Delete confirmation Modal
+
+![Delete Confirmation Modal](screenshots/delete_modal.png)
+
+### Account Page
+
+![Account Page](screenshots/account.png)
 
 ---
 
@@ -126,6 +154,7 @@ multi_user_blog/
 ## Database Models
 
 ### User
+
 - id
 - username
 - email
@@ -134,6 +163,7 @@ multi_user_blog/
 - relationship: posts → BlogPost
 
 ### BlogPost
+
 - id
 - user_id (ForeignKey)
 - title
@@ -154,4 +184,5 @@ multi_user_blog/
 ---
 
 ## License
+
 This project is licensed under the MIT License.
