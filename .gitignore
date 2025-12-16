@@ -24,3 +24,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# User uploaded profile images
+travelcompanyblog/static/profile_pics/*
+!travelcompanyblog/static/profile_pics/default_profile.png
