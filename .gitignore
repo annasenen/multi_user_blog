@@ -28,3 +28,8 @@ var/
 # User uploaded profile images
 travelcompanyblog/static/profile_pics/*
 !travelcompanyblog/static/profile_pics/default_profile.png
+
+# SQLite database files
+*.sqlite
+*.db
+*.sqlite3
