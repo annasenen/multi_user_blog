@@ -1,9 +1,23 @@
 # Multi-User Blog (Flask Project)
 
-A full CRUD multi-user blog application built with **Python**, **Flask**, **SQLite**, **WTForms**, and **SQLAlchemy**.  
-Users can register, log in, update profiles, create blog posts, edit posts, and delete posts.
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Framework-black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
 
-This project was developed as part of a university module to demonstrate backend development, UI templating, secure authentication, and database integration.
+A full CRUD multi-user blog application built with **Python** and **Flask**.
+The application uses **SQLAlchemy** with **SQLite** for data persistence,
+**WTForms** for form handling and validation, and **Flask-Login** for secure
+user authentication.
+
+Users can register, log in, manage their profiles, and create, edit or delete
+blog posts through a clean, responsive interface built with **Bootstrap 5**.
+
+---
+
+## 🎥 Demo Video
+
+▶️ **Application Walkthrough**  
+https://youtu.be/D1xFmdMg18Q
 
 ---
 
@@ -14,7 +28,6 @@ This project was developed as part of a university module to demonstrate backend
 - User registration with secure password hashing
 - User login/logout
 - User profile update (email, username, profile picture)
-- User dashboard with list of posts
 - View posts of other users
 
 ### ✍️ Blog Functionality
@@ -93,17 +106,19 @@ python app.py
 ```
 multi_user_blog/
 │
-├── app.py # Application entry point
-├── requirements.txt # Required Python packages
-├── migrations/ # Database migration files
-├── travelcompanyblog/ # Main application package
-│ ├── models.py # Database models
-│ ├── core/ # Core routes (home page)
-│ ├── users/ # User authentication + views
-│ ├── blog_posts/ # Blog post CRUD logic
-│ ├── templates/ # Jinja2 templates
-│ └── static/ # Images, CSS, uploads
+├── app.py                    # Application entry point
+├── requirements.txt          # Required Python packages
+├── migrations/               # Database migration files
+├── screenshots/              # README screenshots
+├── travelcompanyblog/        # Main application package
+│   ├── models.py             # Database models
+│   ├── core/                 # Core routes (home page)
+│   ├── users/                # User authentication + views
+│   ├── blog_posts/           # Blog post CRUD logic
+│   ├── templates/            # Jinja2 templates
+│   └── static/               # Images, uploads
 └── README.md
+
 ```
 
 ---
